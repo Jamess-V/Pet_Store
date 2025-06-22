@@ -17,6 +17,16 @@
     </header>
 
     <main>
+        <section class="filter-section">
+            <h2>Filter by Type</h2>
+            <div class="filter-checkboxes">
+                <label><input type="checkbox" name="pet-type" value="Dog" checked> Dog</label>
+                <label><input type="checkbox" name="pet-type" value="Cat" checked> Cat</label>
+                <label><input type="checkbox" name="pet-type" value="Bird" checked> Bird</label>
+                <label><input type="checkbox" name="pet-type" value="Capybara" checked> Capybara</label>
+            </div>
+        </section>
+
         <section class="featured">
             <h2>Meet Our Pets</h2>
             <div class="pet-list" id="all-pets">
@@ -39,32 +49,7 @@
         </div>
     </footer>
 
-    <script>
-        const pets = [
-            { "name": "Buddy", "type": "Dog", "age": 3, "img": "petshop-img/dogs/dog01.jpg" },
-            { "name": "Max", "type": "Dog", "age": 4, "img": "petshop-img/dogs/dog02.jpg" },
-            { "name": "Whiskers", "type": "Cat", "age": 2, "img": "petshop-img/cats/cat01.jpg" },
-            { "name": "Mittens", "type": "Cat", "age": 2, "img": "petshop-img/cats/cat02.jpg" }
-        ];
-
-        function adoptPet() {
-            alert("Thank you for adopting!");
-        }
-
-        const ap = document.getElementById("all-pets");
-
-        for (let i = 0; i < pets.length; i++) {
-            const aPet = document.createElement("div");
-            aPet.className = "pet";
-            aPet.innerHTML = `
-                <img src="${pets[i].img}" alt="${pets[i].name}">
-                <h3>${pets[i].name}</h3>
-                <p>Type: ${pets[i].type}</p>
-                <p>Age: ${pets[i].age} years</p>
-                <button onclick="adoptPet()">Adopt Now</button>
-            `;
-            ap.appendChild(aPet);
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
